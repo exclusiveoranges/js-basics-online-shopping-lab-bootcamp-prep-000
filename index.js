@@ -14,7 +14,6 @@ function addToCart(item) {
  var wook = { [item]: itemPrice };
  cart.push(wook);
  console.log (`${item} has been added to your cart.`);
- // debugger
  return cart;
 }
 
@@ -52,14 +51,14 @@ function total() {
 
 function removeFromCart(item) {
   let itemInCart = false;
-  
+
   for(var i = 0; i<cart.length; i++) {
     if (cart[i].hasOwnProperty(item)){
       cart.splice(i, 1);
       itemInCart = true;
     }
   }
-  
+
   if (itemInCart === false){
     console.log('That item is not in your cart.');
   }
@@ -68,5 +67,7 @@ return cart;
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+
+  return ${`Your total cost is \$${total}, which will be charged to the card ${cardNumber}.`}
+  cart = [];
 }
